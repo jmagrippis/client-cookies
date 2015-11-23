@@ -4,7 +4,9 @@ let Cookies = {
 		return document.cookie.replace(regexp, "$1");
 	},
 
-	set: (key, value) => document.cookie = key + "=" + value
+	set: (key, value) => document.cookie = key + "=" + value,
+
+	delete: (key) => document.cookie = key + "=; expires=0"
 };
 
 export { Cookies as default };

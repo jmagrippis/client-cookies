@@ -1,7 +1,7 @@
 {
   "name": "js-cookies",
   "version": "0.1.0",
-  "description": "A modest package to easily set and get cookies in Javacript.",
+  "description": "A modest package to easily set, get and delete cookies in Javacript.",
   "scripts": {
     "test": "mocha test --compilers js:babel-core/register"
   },
