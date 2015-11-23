@@ -1,9 +1,14 @@
 {
-  "name": "js-cookies",
+  "name": "client-cookies",
   "version": "0.1.0",
   "description": "A modest package to easily set, get and delete cookies in Javacript.",
   "scripts": {
-    "test": "mocha test --compilers js:babel-core/register"
+    "test": "mocha test --compilers js:babel-core/register",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "keywords": {
+    ["client", "browser", "cookies", "document", "cookie"]
   },
   "main": "lib/Cookies.js",
   "devDependencies": {
@@ -20,5 +25,10 @@
     "type": "git",
     "url": "https://github.com/Magrippinho/js-cookies"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name" : "Johnny Magrippis",
+    "email" : "j@magrippis.com",
+    "url" : "http://magrippis.com/"
+  }
 }
