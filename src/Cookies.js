@@ -1,6 +1,6 @@
 let Cookies = {
 	get: key => {
-		let regexp = new RegExp("(?:(?:^|.*;\s*)" + key + "\s*\=\s*([^;]*).*$)|^.*$");
+		let regexp = new RegExp("(?:(?:^|.*;\\s*)" + key + "\\s*\\=\\s*([^;]*).*$)|^.*$");
 		return document.cookie.replace(regexp, "$1");
 	},
 
