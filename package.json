@@ -7,9 +7,9 @@
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile"
   },
-  "keywords": {
-    ["client", "browser", "cookies", "document", "cookie"]
-  },
+  "keywords": [
+    "client", "browser", "cookies", "document", "cookie"
+  ],
   "main": "lib/Cookies.js",
   "devDependencies": {
     "babel-cli": "^6.2.0",
