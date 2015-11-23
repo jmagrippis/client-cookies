@@ -1,7 +1,7 @@
 {
   "name": "js-cookies",
   "version": "0.1.0",
-  "description": "A modest package to easily set and get cookies in javacript.",
+  "description": "A modest package to easily set and get cookies in Javacript.",
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile"
@@ -10,6 +10,11 @@
   "devDependencies": {
     "babel-cli": "^6.2.0",
     "babel-preset-es2015": "^6.1.18"
+  },
+  "repository" :
+  {
+  	"type" : "git",
+  	"url" : "https://github.com/Magrippinho/js-cookies"
   },
   "license": "MIT"
 }
