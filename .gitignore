@@ -36,10 +36,13 @@
 ehthumbs.db
 Thumbs.db
 
-#Laravel#
+#Dependencies#
 ######################
 /vendor
 /node_modules
+
+#Laravel#
+######################
 Homestead.yaml
 .env
 
