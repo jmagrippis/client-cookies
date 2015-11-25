@@ -8,7 +8,8 @@ let Cookies = {
 
 	set: (key, value, options = {}) => {
 		let cookie = key + "=" + value;
-		cookie += parseExpiry(options.expires);
+		let expires = parseExpiry(options.expires);
+		cookie += expires ? ';expires=' + expires : '';
 		return document.cookie = cookie;
 	},
 

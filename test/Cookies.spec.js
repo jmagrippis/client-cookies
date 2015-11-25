@@ -35,11 +35,11 @@ describe('Cookies', function() {
 
 		it('should set the expiry according to the provided option', function () {
 			Cookies.get('expiring-soon').should.equal('');
-			Cookies.set('expiring-soon', 'like, a day after', {expiry: 1});
+			Cookies.set('expiring-soon', 'like, a day after', {expires: 1});
 			Cookies.get('expiring-soon').should.equal('like, a day after');
 
 			Cookies.get('expiring later').should.equal('');
-			Cookies.set('expiring later', 'twenty days later even.', {expiry: 20});
+			Cookies.set('expiring later', 'twenty days later even.', {expires: 20});
 			Cookies.get('expiring later').should.equal('twenty days later even.');
 		});
 

@@ -1,11 +1,11 @@
 let parseExpiry = function (expires) {
 	switch (typeof expires) {
 		//no expiry provided
-		case "undefined":
-			return "";
+		case 'undefined':
+			return '';
 			break;
 		//expiry provided as a number of days
-		case "number":
+		case 'number':
 			return new Date(new Date().getTime() + expires * 1000*60*60*24);
 			break;
 		//expiry provided as a string parsable as a date object
