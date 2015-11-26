@@ -12,6 +12,7 @@ let Cookies = {
     let cookie = key + '=' + value;
     let expires = parseExpiry(options.expires);
     cookie += expires ? ';expires=' + expires : '';
+    cookie += options.secure ? ';secure' : '';
     document.cookie = cookie;
     return;
   },
