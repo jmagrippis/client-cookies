@@ -49,3 +49,7 @@ Homestead.yaml
 #PHPStorm
 ######################
 .idea/*
+
+#Linting
+######################
+.eslintrc.json
