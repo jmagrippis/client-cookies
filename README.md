@@ -9,7 +9,8 @@ Written on EcmaScript 2015, compiled to regular ES5.
 ```javascript
 import Cookies from 'client-cookies';
 
-Cookies.set('language', 'javascript'); // Sets the 'language' cookie, expires at end of session
+Cookies.set('language', 'javascript');
+// Sets the 'language' cookie, expires at end of session
 
 Cookies.get('language'); // Returns 'javascript'
 
@@ -30,7 +31,8 @@ The available tweakable options are:
 ### Examples
 
 ```javascript
-Cookies.get('set expiry', 'two days later', {expires: 2}); // Will expire two days later
+Cookies.set('set expiry', 'two days later', {expires: 2});
+// Will expire two days later
 ```
 
 ### Testing
