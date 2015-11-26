@@ -1,6 +1,6 @@
 {
   "name": "client-cookies",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "A modest package to easily set, get and delete cookies in Javacript.",
   "scripts": {
     "test": "mocha test --compilers js:babel-core/register",
