@@ -43,6 +43,32 @@ describe('Cookies', function() {
 			Cookies.get('expiring later').should.equal('twenty days later even.');
 		});
 
+    it('should pass the secure attribute only when the relevant option is truthy', function () {
+      let cookie = Cookies.set('sensitive cookie', 'transmitted only via https', {secure: 1});
+      cookie.should.include('secure');
+      cookie = Cookies.set('another cookie', 'transmitted only via https', {secure: true});
+      cookie.should.include('secure');
+
+      cookie = Cookies.set('non-sensitive cookie', 'transmitted via anything', {secure: 0});
+      cookie.should.not.include('secure');
+      cookie = Cookies.set('another simple cookie', 'transmitted via anything', {secure: false});
+      cookie.should.not.include('secure');
+    });
+
+    it('should pass the HttpOnly attribute only when the relevant option is truthy', function () {
+      let cookie = Cookies.set('no xss for this cookie', 'read only by the client', {HttpOnly: 1});
+      cookie.should.include('HttpOnly');
+      cookie = Cookies.set('another cookie', 'read only by the client', {HttpOnly: true});
+      cookie.should.include('HttpOnly');
+      Cookies.get('another cookie').should.equal('');
+
+      cookie = Cookies.set('non-sensitive cookie', 'read by anything', {HttpOnly: 0});
+      cookie.should.not.include('HttpOnly');
+      cookie = Cookies.set('another simple cookie', 'read by anything', {HttpOnly: false});
+      cookie.should.not.include('HttpOnly');
+      Cookies.get('another simple cookie').should.equal('read by anything');
+    });
+
 	});
 
 	describe('#delete()', function () {

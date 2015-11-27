@@ -11,10 +11,11 @@ let Cookies = {
   set: (key, value, options = {}) => {
     let cookie = key + '=' + value;
     let expires = parseExpiry(options.expires);
-    cookie += expires ? ';expires=' + expires : '';
-    cookie += options.secure ? ';secure' : '';
+    cookie += expires ? '; expires=' + expires : '';
+    cookie += options.secure ? '; secure' : '';
+    cookie += options.HttpOnly ? '; HttpOnly' : '';
     document.cookie = cookie;
-    return;
+    return cookie;
   },
 
   delete: key => document.cookie = key + '=; expires=0'

@@ -28,6 +28,7 @@ The available tweakable options are:
 |------------|----------------------------|---------|--------
 | `expires`  | `Number`, `Date`, `String` | `''`    | When the property is not passed along, the set cookie will expire at the end of the session. When it is passed along, then the value's type will be evaluated. If it's a number, the cookie will expire that number of days later. If it's a Date instance, the cookie's expiry will be set for that date. Lastly, if it's a string, the code will try to parse a Date instance from it, and set the expiry for then; if it's not parsable, it will be the same as if the expires property had not be set at all, so the cookie will expire at the end of the session.
 | `secure`   | `Boolean`                  | `false` | Setting this to true, or any "truthy" value, will only allow the cookie to be trasmitted over HTTPS.
+| `HttpOnly` | `Boolean`                  | `false` | Setting this to true, or any "truthy" value, will only allow the cookie to be read by the server; **but only if the client adheres to standards**!
 
 ### Examples
 
@@ -37,6 +38,10 @@ Cookies.set('set expiry', 'two days later', {expires: 2});
 
 Cookies.set('sensitive-info', '42', {secure: true, expires: 9});
 // Will only be transmitted via HTTPS, and expire after 9 days.
+
+Cookies.set('XSS protection', 'slight', {HttpOnly: 1, secure: 1});
+// Will only be transmitted via HTTPS and read by the server,
+// *if* the client adheres to standards.
 ```
 
 ### Testing
