@@ -18,9 +18,9 @@
   ],
   "main": "lib/Cookies.js",
   "devDependencies": {
-    "babel-cli": "^6.2.0",
-    "babel-core": "^6.2.1",
-    "babel-preset-es2015": "^6.1.18",
+    "babel-cli": "^6.2.4",
+    "babel-core": "^6.2.4",
+    "babel-preset-es2015": "^6.2.4",
     "chai": "^3.4.1",
     "chai-datetime": "^1.4.0",
     "jsdom": "^7.0.2",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Magrippinho/client-cookies"
+    "url": "https://github.com/jmagrippis/client-cookies"
   },
   "license": "MIT",
   "author": {
